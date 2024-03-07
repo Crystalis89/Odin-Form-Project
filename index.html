@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Form Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer> function escapeRegExp(str) {
+        return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+      }</script>
+</head>
+<body>
+    <div id="sidebar">
+
+    <div id="imagetile">
+        <img src="odin-lined.png" alt="" class="headimage">
+        <h1 id="imagetext">ODIN</h1>
+    </div>
+
+        <p class="imagecredits">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="http://www.unsplash.com">Unsplash</a></p>
+    
+    </div>
+    <main class="container">
+        <div id="description">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. 
+                Sign up now to get started. </p>
+                <p>know you want to.</p>
+        </div>
+        <div id="formdiv">
+
+            <form action="" class="form">
+                    <div id="title">
+                        <h3>Let's do this!</h3>
+                    </div>
+                <div id="formcontents">
+                   <div>
+                    <label for="firstname"><span>First Name</span></label>
+                        <input type="text" name="firstname" id="firstname" class="forminputs" placeholder="John">
+                    </div>
+                    <div>
+                    <label for="lastname"><span>Last Name</span></label>
+                        <input type="text" id="lastname" name="lastname" class="forminputs" placeholder="Doe">
+                    </div>              
+                    <div>
+                    <label for="email"><span>Email</span></label>
+                        <input type="email" id="email" name="email" class="forminputs" placeholder="JohnDoe@email.com">
+                    </div>
+
+                        <div>
+                    <label for="phone"><span>Phone Number</span></label>
+                        <input type="tel" id="phone" minlength="9" name="phonenumber" class="forminputs" placeholder="123-456-7890">
+                    </div>
+                    <div>
+                    <label for="password"><span>Password - Requires lower & Upper case Numer and Symbol</span></label>                    
+                        <input oninput="form.confirmpassword.pattern = escapeRegExp(this.value)" type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" class="forminputs" placeholder="a1B2c3D4!" required>
+                    </div>  
+                    <div>
+                    <label for="confirmpassword"><span>Confirm Password</span></label>
+                        <input type="password" id="confirmpassword" name="confirmpassword" pattern="" class="forminputs" placeholder="a1B2c3D4!" required>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+                    <div id="buttondiv">
+            <button>Submit </button>                   
+            </div>
+    </form>
+    <div>
+        <p>Already have an account? <a href="">Log in</a></p>
+    </div>
+    </main>
+</body>
+</html>
